@@ -1,6 +1,6 @@
-const iconLink = document.querySelector('.icon-link');
+const iconLinks = document.querySelectorAll('.icon-link');
 
-if (iconLink) {
+iconLinks.forEach((iconLink) => {
   iconLink.addEventListener('pointermove', (event) => {
     const rect = iconLink.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
@@ -11,4 +11,4 @@ if (iconLink) {
   iconLink.addEventListener('pointerleave', () => {
     iconLink.style.transform = '';
   });
-}
+});
